@@ -43,7 +43,7 @@ const createProject = async (req, res) => {
     // Generate URLs for all images
     const imagesWithUrl = project.images.map((img, index) => ({
       ...img.toObject(),
-      url: `${BASE_URL}/api/projects/${project._id}/image/${index}`,
+      url: `${BASE_URL}/api/projects/${project._id}/images/${index}`,
     }));
 
     // Prepare caption (first image only)
@@ -99,4 +99,5 @@ const createProject = async (req, res) => {
 };
 
 module.exports = { getProjects, createProject, getProjectImage };
+
 
