@@ -37,8 +37,8 @@ const createProject = async (req, res) => {
   try {
     const project = await Project.create(req.body);
 
-    // Base URL of your API (replace with your actual domain or use env variable)
-    const BASE_URL = process.env.BASE_URL || "http://localhost:5000";
+   
+    const BASE_URL = "https://eyob-portfolio-backend.vercel.app";
 
     // Generate URLs for all images
     const imagesWithUrl = project.images.map((img, index) => ({
@@ -99,3 +99,4 @@ const createProject = async (req, res) => {
 };
 
 module.exports = { getProjects, createProject, getProjectImage };
+
